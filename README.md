@@ -1,43 +1,41 @@
-# Astro Starter Kit: Minimal
+# Vercel Redirects & Rewrites with Astro + React
 
-```sh
-npm create astro@latest -- --template minimal
+This project demonstrates Vercel's redirects and rewrites using an Astro site with small React UI.
+
+## Stack
+- Astro 5
+- React 19 via `@astrojs/react`
+- Vercel adapter `@astrojs/vercel`
+
+## Pages
+- `/` → Home
+- `/blog` → Blog
+- `/profile` → Profile
+- `/archive` → Archive
+
+Each page renders `src/components/PageIndicator.tsx` (hydrated with React) to indicate the current page.
+
+## Vercel routing config
+`vercel.json` contains:
+- Rewrites
+  - `/old-blog/:slug` → `/blog`
+  - `/u/:user` → `/profile`
+- Redirects
+  - `/home` → `/` (permanent)
+  - `/legacy-archive` → `/archive` (temporary)
+
+Rewrites serve content from a different path without changing the browser URL. Redirects instruct the browser to navigate to a different URL (301/302).
+
+## Run locally
+```bash
+npm install
+npm run dev            # Astro dev (does not apply vercel.json)
+npm run dev:vercel     # Vercel dev (applies vercel.json routing)
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+## Build
+```bash
+npm run build
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The build uses the Vercel adapter and outputs `.vercel/output` for deployment.

@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    { "source": "/old-blog/:slug", "destination": "/blog" },
+    { "source": "/u/:user", "destination": "/profile" }
+  ],
+  "redirects": [
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/legacy-archive", "destination": "/archive", "permanent": false }
+  ]
+}
+
+
