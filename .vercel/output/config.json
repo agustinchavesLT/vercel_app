@@ -2,6 +2,20 @@
 	"version": 3,
 	"routes": [
 		{
+			"src": "^/blog$",
+			"headers": {
+				"Location": "/archive"
+			},
+			"status": 301
+		},
+		{
+			"src": "^/old-home$",
+			"headers": {
+				"Location": "/blog"
+			},
+			"status": 301
+		},
+		{
 			"handle": "filesystem"
 		},
 		{
