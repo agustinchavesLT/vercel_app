@@ -7,7 +7,7 @@
     { "source": "/home", "destination": "/", "permanent": true },
     { "source": "/legacy-archive", "destination": "/archive", "permanent": false },
     { "source": "/blog/:path*", "destination": "/archive", "permanent": false },
-    { "source": "/old-home/:path*", "destination": "/profile", "permanent": false }
+    { "source": "/old-home/:path*", "destination": "/blog", "permanent": false }
   ]
 }
 

@@ -11,6 +11,6 @@ export default defineConfig({
   adapter: vercel(),
   redirects: {
     '/blog': '/archive',
-    '/old-home': '/profile'
+    '/old-home': '/blog'
   }
 });
