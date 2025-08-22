@@ -5,7 +5,9 @@
   ],
   "redirects": [
     { "source": "/home", "destination": "/", "permanent": true },
-    { "source": "/legacy-archive", "destination": "/archive", "permanent": false }
+    { "source": "/legacy-archive", "destination": "/archive", "permanent": false },
+    { "source": "/blog", "destination": "/archive", "permanent": false },
+    { "source": "/old-home", "destination": "/profile", "permanent": false }
   ]
 }
 
