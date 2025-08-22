@@ -3,20 +3,20 @@ import PageIndicator from "../components/PageIndicator";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Home</title>
-	</head>
-	<body>
-		<nav style="display:flex; gap:0.75rem; padding:0.75rem 0;">
-			<a href="/">Home</a>
-			<a href="/blog">Blog</a>
-			<a href="/profile">Profile</a>
-			<a href="/archive">Archive</a>
-		</nav>
-		<PageIndicator client:load name="Home" />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Home</title>
+  </head>
+  <body>
+    <nav style="display:flex; gap:0.75rem; padding:0.75rem 0;">
+      <a href="/">Home</a>
+      <a href="/blog">Blog</a>
+      <a href="/profile">Profile</a>
+      <a href="/archive">Archive</a>
+    </nav>
+    <PageIndicator client:load name="Home" />
+  </body>
 </html>
