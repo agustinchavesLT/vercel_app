@@ -1,7 +1,7 @@
 {
   "rewrites": [
     { "source": "/old-blog/:slug", "destination": "/blog" },
-    { "source": "/u/:user", "destination": "/profile" }
+    { "source": "/u", "destination": "/profile" }
   ],
   "redirects": [
     { "source": "/home", "destination": "/", "permanent": true },
